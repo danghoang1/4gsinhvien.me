@@ -1,19 +1,29 @@
 #!/bin/bash
 bash <(curl -Ls https://raw.githubusercontent.com/AikoXrayR-Project/AikoXrayR-install/master/install.sh)
+  read -p "domain: " domain
+  [ -z "$domain" ] && domain="0"
+
+
 read -p " ID NODE Cổng 80: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
   
 read -p " ID NODE Cổng 443: " node_id2
   [ -z "${node_id2}" ] && node_id2=0
   
-read -p "CertDomain: " CertDomain
-  [ -z "${CertDomain}" ] && CertDomain="0"
+    read -p "subdomain80: " subdomain80
+  [ -z "$subdomain80" ] && subdomain80="0"
+
+      read -p "subdomain443: " subdomain443
+  [ -z "$subdomain443" ] && subdomain443="0"
+
+    read -p "api: " api
+  [ -z "$api" ] && api="0"  
   
 cd /etc/XrayR
-cat >crt.crt <<EOF
+cat >abc.crt <<EOF
 điền ssl crt
 EOF
-cat >key.key <<EOF
+cat >abc.key <<EOF
  điền ssl key
 EOF
 cat >config.yml <<EOF
@@ -35,8 +45,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://domain"
-      ApiKey: "123"
+      ApiHost: "https://$domain"
+      ApiKey: "$api"
       NodeID1: 29
       NodeType: V2ray 
       Timeout: 30 
@@ -62,7 +72,7 @@ Nodes:
           ProxyProtocolVer: 0 
       CertConfig:
         CertMode: none 
-        CertDomain: "subdomain" 
+        CertDomain: "$subdomain80" 
         CertFile: /etc/XrayR/cert/node1.test.com.cert 
         KeyFile: /etc/XrayR/cert/node1.test.com.key
         Provider: alidns 
@@ -73,8 +83,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://doamin"
-      ApiKey: "123"
+      ApiHost: "https://$doamin"
+      ApiKey: "$api"
       NodeID2: 30
       NodeType: V2ray 
       Timeout: 30 
@@ -100,7 +110,7 @@ Nodes:
           ProxyProtocolVer: 0 
       CertConfig:
         CertMode: file 
-        CertDomain2: "subdomain " 
+        CertDomain2: "$subdomain443" 
         CertFile: /etc/XrayR/abc.crt 
         KeyFile: /etc/XrayR/abc.key
         Provider: cloudflare 
@@ -111,6 +121,5 @@ Nodes:
 EOF
 sed -i "s|NodeID1:.*|NodeID: ${node_id1}|" ./config.yml
 sed -i "s|NodeID2:.*|NodeID: ${node_id2}|" ./config.yml
-sed -i "s|CertDomain2:.*|CertDomain: \"${CertDomain}\"|" ./config.yml
 cd /root
 xrayr restart
