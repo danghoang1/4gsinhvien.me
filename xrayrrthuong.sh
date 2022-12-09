@@ -1,8 +1,10 @@
 #!/bin/bash
 bash <(curl -Ls https://raw.githubusercontent.com/AikoXrayR-Project/AikoXrayR-install/master/install.sh)
-  read -p "domain: " domain
-  [ -z "$domain" ] && domain="0"
+  read -p "domain80: " domain80
+  [ -z "$domain80" ] && domain80="0"
 
+  read -p "domain443: " domain443
+  [ -z "$domain443" ] && domain443="0"
 
 read -p " ID NODE Cổng 80: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
