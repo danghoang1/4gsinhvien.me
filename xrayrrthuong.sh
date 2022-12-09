@@ -45,7 +45,7 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://$domain"
+      ApiHost: "https://$domain80"
       ApiKey: "$api"
       NodeID1: 29
       NodeType: V2ray 
@@ -83,7 +83,7 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://$doamin"
+      ApiHost: "https://$doamin443"
       ApiKey: "$api"
       NodeID2: 30
       NodeType: V2ray 
