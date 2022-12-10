@@ -55,12 +55,12 @@ install_XrayR() {
 }
 
 makeConfig() {
-    echo "------  Config 80 & 443 BY FAST4G.NET ---------"
+    echo "------  Config 80 & 443 BY 4GSINHVIEN.ME ---------"
 	read -p "Loại website của bạn: V2board"
 	echo "---------------"
-	read -p "Link website: https://data4gdinhtien178.online/"
+	read -p "Link website: https://4gsinhvien.me/"
 	echo "---------------"
-	read -p "API key của web: 4gsinhviensieungon"
+	read -p "API key của web: danghoangadmin@4gsinhvien.me"
 	echo "---------------"
 	read -p "Node ID 80: " NodeID80
 	echo -e "Node 80 là: ${NodeID80}"
@@ -103,15 +103,15 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://data4gdinhtien178.online"
-      ApiKey: "4gsinhviensieungon"
+      ApiHost: "https://4gsinhvien.me"
+      ApiKey: "danghoangadmin@4gsinhvien.me"
       NodeID: $NodeID80
       NodeType: V2ray 
       Timeout: 30 
       EnableVless: false 
       EnableXTLS: false 
       SpeedLimit: 0 
-      DeviceLimit: $limitDevice
+      DeviceLimit: 2
       RuleListPath: # /etc/XrayR/rulelist
     ControllerConfig:
       DisableSniffing: True
@@ -141,8 +141,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://data4gdinhtien178.online/"
-      ApiKey: "4gsinhviensieungon"
+      ApiHost: "https://4gsinhvien.me"
+      ApiKey: "danghoangadmin@4gsinhvien.me"
       NodeID: $NodeID443
       NodeType: V2ray 
       Timeout: 30 
@@ -168,7 +168,7 @@ Nodes:
           ProxyProtocolVer: 0 
       CertConfig:
         CertMode: file 
-        CertDomain: "$CertDomain443"
+        CertDomain: loadiphn.4gsinhvien.me
         CertFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.crt 
         KeyFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.key
         Provider: cloudflare 
