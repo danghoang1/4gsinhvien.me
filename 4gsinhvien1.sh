@@ -149,7 +149,7 @@ Nodes:
       EnableVless: false 
       EnableXTLS: false 
       SpeedLimit: 0 
-      DeviceLimit: $limitDevice
+      DeviceLimit: 2
       RuleListPath: # /etc/XrayR/rulelist
     ControllerConfig:
       DisableSniffing: True
