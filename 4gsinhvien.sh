@@ -14,7 +14,7 @@ read -p " ID NODE Cổng 443: " node_id2
       read -p "subdomain443: " subdomain443
   [ -z "$subdomain443" ] && subdomain443="0"
 
-
+cd /etc/XrayR
   
 
 EOF
