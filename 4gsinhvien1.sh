@@ -111,7 +111,7 @@ Nodes:
       EnableVless: false 
       EnableXTLS: false 
       SpeedLimit: 0 
-      DeviceLimit: 2
+      DeviceLimit: $limitDevice
       RuleListPath: # /etc/XrayR/rulelist
     ControllerConfig:
       DisableSniffing: True
@@ -149,7 +149,7 @@ Nodes:
       EnableVless: false 
       EnableXTLS: false 
       SpeedLimit: 0 
-      DeviceLimit: 2
+      DeviceLimit: $limitDevice
       RuleListPath: # /etc/XrayR/rulelist
     ControllerConfig:
       DisableSniffing: True
@@ -168,7 +168,7 @@ Nodes:
           ProxyProtocolVer: 0 
       CertConfig:
         CertMode: file 
-        CertDomain: loadiphn.4gsinhvien.me
+        CertDomain: "$CertDomain443"
         CertFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.crt 
         KeyFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.key
         Provider: cloudflare 
@@ -186,4 +186,3 @@ EOF
 }
 
 install
-
