@@ -167,7 +167,7 @@ Nodes:
           Dest: 80 
           ProxyProtocolVer: 0 
       CertConfig:
-        CertMode: file 
+        CertMode: http 
         CertDomain: "$CertDomain443"
         CertFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.crt 
         KeyFile: /etc/XrayR/cert-4gsinhvien/4gsinhvien.key
