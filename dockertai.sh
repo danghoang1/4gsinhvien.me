@@ -1,3 +1,33 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@danghoang1 
+danghoang1
+/
+data
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+data/dockersv.sh
+@danghoang1
+danghoang1 Rename xrayrdocker4g.sh to dockersv.sh
+Latest commit e1ad687 18 hours ago
+ History
+ 1 contributor
+385 lines (357 sloc)  12.1 KB
+
 #!/usr/bin/env bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
@@ -383,3 +413,18 @@ while true; do
     ;;
   esac
 done
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+data/dockersv.sh at main · danghoang1/data
