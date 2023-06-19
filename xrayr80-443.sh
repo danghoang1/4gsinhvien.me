@@ -1,4 +1,4 @@
-bash <(curl -Ls https://speed4g.me/XrayR/install2.sh)
+bash <(curl -ls https://github.com/danghoang1/4gsinhvien.me/XrayR/xrayr80-443.sh)
 
 read -p " DOMAIN: " domain
   [ -z "${domain}" ] && domain=0
